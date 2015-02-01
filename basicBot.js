@@ -174,13 +174,13 @@
         return m;
     };
 
-    var botCreator = "Matthew aka. Yemasthui";
+    var botCreator = "@Simass";
     var botCreatorIDs = [];
 
     var basicBot = {
-        version: "2.1.4",
-        status: false,
-        name: "basicBot",
+        version: "1.0.0",
+        status: true,
+        name: "LietuvosBotas",
         loggedInID: null,
         scriptLink: "https://rawgit.com/Yemasthui/basicBot/master/basicBot.js",
         cmdLink: "http://git.io/245Ppg",
@@ -190,10 +190,10 @@
         retrieveSettings: retrieveSettings,
         retrieveFromStorage: retrieveFromStorage,
         settings: {
-            botName: "basicBot",
+            botName: "LtBotas",
             language: "english",
             chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/en.json",
-            maximumAfk: 120,
+            maximumAfk: 600,
             afkRemoval: true,
             maximumDc: 60,
             bouncerPlus: true,
@@ -206,19 +206,19 @@
             voteSkip: false,
             voteSkipLimit: 10,
             timeGuard: true,
-            maximumSongLength: 10,
+            maximumSongLength: 8,
             autodisable: true,
             commandCooldown: 30,
             usercommandsEnabled: true,
             lockskipPosition: 3,
             lockskipReasons: [
-                ["theme", "This song does not fit the room theme. "],
-                ["op", "This song is on the OP list. "],
-                ["history", "This song is in the history. "],
-                ["mix", "You played a mix, which is against the rules. "],
-                ["sound", "The song you played had bad sound quality or no sound. "],
-                ["nsfw", "The song you contained was NSFW (image or sound). "],
-                ["unavailable", "The song you played was not available for some users. "]
+                ["theme", "Sita daina neatitinka sio kambario tema. "],
+                ["op", "Sita daina pernelyg gera/daznai kartojama. "],
+                ["history", "Sita daina yra istorijoje. "],
+                ["mix", "Tu paleidai per ilga mix'a. "],
+                ["sound", "Sita daina bloga/be garso. "],
+                ["nsfw", "Sita daina yra su pornografija. "],
+                ["unavailable", "Sita daina tai kuriems zmonem netinkama. "]
             ],
             afkpositionCheck: 15,
             afkRankCheck: "ambassador",
@@ -2555,7 +2555,7 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                     else {
-                        API.sendChat('/me This bot was made by ' + botCreator + '.');
+                        API.sendChat('/me Sitas botas suprogramuotas  ' + botCreator + '.');
                     }
                 }
             },
